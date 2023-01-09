@@ -1,0 +1,27 @@
+select * from employees;
+select * from employees where monthname(born_date) = 'March'
+
+---
+
+create database ferresteel;
+
+use ferresteel;
+create table employees (
+	id int not null auto_increment,
+    employee_number int not null,
+	first_name varchar(255) not null,
+	middle_name varchar(255),
+    last_name varchar(255),
+	primary key (id)
+);
+
+show databases;
+use ferresteel;
+show tables;
+select * from employees;
+insert into employees (first_name, middle_name, employee_number)
+values
+	(Miguel, Angel, 00001);
+
+use ferresteel;
+drop table employees;
